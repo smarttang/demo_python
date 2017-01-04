@@ -4,7 +4,15 @@ import time
 
 import requests
 
-from huobi.Util import *
+from Util import *
+
+
+'''
+获取大盘情况
+'''
+def getdashboard():
+    dashboard = requests.get('http://api.huobi.com/staticmarket/ticker_btc_json.js')
+    print dashboard.json()
 
 
 '''
